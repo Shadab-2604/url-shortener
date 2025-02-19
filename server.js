@@ -7,8 +7,9 @@ require('dotenv').config(); // Load environment variables from .env
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('public')); // Serve static files from the "public" directory
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
@@ -22,6 +23,11 @@ const urlSchema = new mongoose.Schema({
 });
 
 const Url = mongoose.model('Url', urlSchema);
+
+// Serve the index.html file for the root route
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
 
 // Shorten URL
 app.post('/shorten', async (req, res) => {
