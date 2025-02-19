@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.stat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    color: #007bff;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Styles */
+#urlForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#longUrl {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Section */
+.result-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item a {
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.result-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.result-actions button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-actions .copy-btn {
+    background-color: #28a745;
+}
+
+.result-actions .copy-btn:hover {
+    background-color: #218838;
+}
+
+.result-actions .delete-btn {
+    background-color: #dc3545;
+}
+
+.result-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat {
+        width: 100%;
+    }
+
+    #urlForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #longUrl {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}
